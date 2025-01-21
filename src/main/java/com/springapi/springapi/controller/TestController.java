@@ -14,6 +14,6 @@ public class TestController {
 
     @RequestMapping(value = "/getRecord", method = RequestMethod.GET)
     public String displayString(){
-        return "Iloveyou love";
+        return "naka live naba it vin";
     }
 }
