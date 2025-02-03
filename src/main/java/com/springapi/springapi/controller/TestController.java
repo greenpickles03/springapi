@@ -20,6 +20,11 @@ public class TestController {
         return "Iloveyou love sleep well muah";
     }
 
+    @RequestMapping(value = "/getMessage", method = RequestMethod.GET)
+    public String displayMessage() throws Throwable{
+        return "ito palang ang naka lagay sa service ko wala pang design haha";
+    }
+
     @RequestMapping(value = "/getResult", method = RequestMethod.GET)
     public String displayCondition(@Param("department_code") String department_code){
         String result = "";
