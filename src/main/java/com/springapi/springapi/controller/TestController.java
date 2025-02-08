@@ -1,6 +1,7 @@
 package com.springapi.springapi.controller;
 
-import lombok.RequiredArgsConstructor;
+//import lombok.RequiredArgsConstructor;
+//import org.springframework.data.repository.query.Param;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @RequestMapping("/api/test")
 @CrossOrigin(origins = "*")
 public class TestController {
