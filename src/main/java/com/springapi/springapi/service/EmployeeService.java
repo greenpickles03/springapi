@@ -9,4 +9,6 @@ public interface EmployeeService {
     EmployeeDto createEmployee(EmployeeDto employeeDto);
 
     List<Employee> findByFirstName(String name);
+    Iterable<Employee> findAllRecord();
+    Iterable<Employee> findRecordByFirstName(String name);
 }

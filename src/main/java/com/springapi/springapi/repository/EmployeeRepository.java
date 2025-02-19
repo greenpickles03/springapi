@@ -8,5 +8,6 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     List<Employee> findByFirstName(String name);
+    Iterable<Employee> findRecordByFirstName(String name);
 
 }

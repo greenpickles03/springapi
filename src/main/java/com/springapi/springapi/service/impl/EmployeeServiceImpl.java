@@ -38,5 +38,15 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.findByFirstName(name);
     }
 
+    @Override
+    public Iterable<Employee> findAllRecord() {
+        return employeeRepository.findAll();
+    }
+
+    @Override
+    public Iterable<Employee> findRecordByFirstName(String name) {
+        return employeeRepository.findRecordByFirstName(name);
+    }
+
 
 }

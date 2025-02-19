@@ -3,6 +3,7 @@ package com.springapi.springapi.controller;
 
 import com.springapi.springapi.dto.EmployeeDto;
 import com.springapi.springapi.model.Employee;
+import com.springapi.springapi.repository.EmployeeRepository;
 import com.springapi.springapi.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,15 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    @GetMapping("/findRecordByName")
+    public Iterable<Employee> findRecord(@RequestParam("name") String name){
+        return employeeService.findRecordByFirstName(name);
+    }
+
+    @GetMapping
+    public Iterable<Employee> fetchAll(){
+        return employeeService.findAllRecord();
+    }
     @RequestMapping(value = "/create", method = RequestMethod.POST)
 //    @PostMapping("/create")
     public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto){
